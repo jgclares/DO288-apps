@@ -1,4 +1,9 @@
 #!/bin/bash
+env
+
+echo "**Current Dir: " $(pwd)
+
+ls -lRa  /tmp/src
 
 set -e
 
