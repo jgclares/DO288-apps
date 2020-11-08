@@ -81,9 +81,10 @@ pipeline {
                       }
                     }
                 }
+	sh '''
 		oc  new-app --as-deployment-config  --name movies -i movies:latest  -n ${DEV_PROJECT}
-
 		oc expose svc movies -n ${DEV_PROJECT}
+	   '''
             }
         }
 
