@@ -139,7 +139,7 @@ steps {
 	sh '''
              oc project ${STAGE_PROJECT}
              oc new-app --as-deployment-config --name movies -i movies:stage 
-	     oc expose svc stage 
+	     oc expose svc ${APP_NAME}
 	'''
             }
         }
